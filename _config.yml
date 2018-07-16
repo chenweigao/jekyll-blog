@@ -137,13 +137,13 @@ pageview:
 
 ## => Analytics
 ##############################
-analytics:
-  provider: # false (default), "google", "custom"
+# analytics:
+#   provider: # false (default), "google", "custom"
 
   ## Google Analytics
-  google:
-    tracking_id : UA-71907556-1
-    anonymize_ip: false
+  # google:
+  #   tracking_id : UA-71907556-1
+  #   anonymize_ip: false
 
 
 ## => Build
