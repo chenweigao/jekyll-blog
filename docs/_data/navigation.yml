@@ -8,7 +8,7 @@ header:
   # - title:      文档
   #   url:        /docs/zh/quick-start
   - title:      About
-    url:        /about
+    url:        /about.html
   - title:      GitHub
     url:        https://github.com/chenweigao
 

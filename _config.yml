@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : 
+url     : https://www.weigao.cc
 baseurl : 
 title   : Nerche
 description: >
@@ -36,24 +36,23 @@ timezone: Asia/Shanghai
 author:
   type      : weigao # "person" (default), "organization"
   name      : Weigao Chen
-  url       :
+  url       : www.weigao.cc
   avatar    : /assets/apple-touch-icon.png
   bio: >
-    TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc.
-    Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
-  email     : mail@weigao.cc
+   
+  email     : https://mail@weigao.cc
   facebook  :
   twitter   : 
-  github    : 
+  github    : chenweigao
   linkedin  :
-  googleplus: 101827554735084402671
-  weibo     : 234695683
+  googleplus: 
+  weibo     : 
   douban    :
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: kitian616/jekyll-TeXt-theme
+repository: chenweigao/nerche_site1
 repository_tree: master
 
 
@@ -116,12 +115,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : 143666b578a416f82175
-    clientSecret: 1d1c0604a1a4bff9b59ab7f56724dc0e8b837775
-    repository  : gitalk-demo
-    owner       : kitian616
+    clientID    : 6cef80132492d89a6adb
+    clientSecret: 4d7577147a7f7afca21a9e28b61b087c94989b2c
+    repository  : nerche_talk
+    owner       : chenweigao
     admin:
-      - kitian616
+      - chenweigao
 
 
 ## => Pageview
@@ -131,15 +130,15 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id    : uAG3OhdcH8H4fxSqXLyBljA7-gzGzoHsz
-    app_key   : Mzf5m9skexSwYVWVXhGiYMNyXs
-    app_class : TeXtDemo
+    app_id    : wJrq8Ck2MqeaFzOYUf0TcP6G-gzGzoHsz
+    app_key   : taRHm1fEce4nGp2lmNgkiW9U
+    app_class : note
 
 
 ## => Analytics
 ##############################
 analytics:
-  provider: google # false (default), "google", "custom"
+  provider: # false (default), "google", "custom"
 
   ## Google Analytics
   google:
