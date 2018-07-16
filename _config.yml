@@ -20,9 +20,9 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://www.weigao.cc
 baseurl : 
-title   : Nerche
+title   : Main
 description: >
-  A customizable Jekyll theme for blog or site
+  # A customizable Jekyll theme for blog or site
 
 
 ## => Language and Timezone
@@ -52,7 +52,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: chenweigao/nerche_site1
+repository: chenweigao/chenweigao.github.io
 repository_tree: master
 
 
@@ -105,34 +105,34 @@ sources: # bootcdn (default), unpkg
 
 ## => Comments
 ##############################
-comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "custom"
+# comments:
+#   provider: gitalk # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
-  disqus:
-    shortname: # the Disqus shortname for the site
+  # disqus:
+  #   shortname: # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
-  gitalk:
-    clientID    : 6cef80132492d89a6adb
-    clientSecret: 4d7577147a7f7afca21a9e28b61b087c94989b2c
-    repository  : nerche_talk
-    owner       : chenweigao
-    admin:
-      - chenweigao
+  # gitalk:
+  #   clientID    : 6cef80132492d89a6adb
+  #   clientSecret: 4d7577147a7f7afca21a9e28b61b087c94989b2c
+  #   repository  : nerche_talk
+  #   owner       : chenweigao
+  #   admin:
+  #     - chenweigao
 
 
 ## => Pageview
 ##############################
-pageview:
-  provider: leancloud # false (default), "leancloud", "custom"
+# pageview:
+#   provider: leancloud # false (default), "leancloud", "custom"
 
-  ## Leancloud
-  leancloud:
-    app_id    : wJrq8Ck2MqeaFzOYUf0TcP6G-gzGzoHsz
-    app_key   : taRHm1fEce4nGp2lmNgkiW9U
-    app_class : note
+#   ## Leancloud
+#   leancloud:
+#     app_id    : wJrq8Ck2MqeaFzOYUf0TcP6G-gzGzoHsz
+#     app_key   : taRHm1fEce4nGp2lmNgkiW9U
+#     app_class : note
 
 
 ## => Analytics
