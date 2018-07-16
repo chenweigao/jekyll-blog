@@ -8,32 +8,32 @@
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-details.png)
 
-TeXt is a Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+TeXt 是针对个人或团队网站、博客、项目、文档等的一款 Jekyll 主题。它参考了 iOS 11 的风格，有大而突出的标题和圆润的按钮及卡片。
 
-[中文文档](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)
+[English Documentation](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)
 
 ## Features
 
-- Responsive
-- Skins
-- Highlight Theme
-- Table of contents
-- Authors
-- Multi-language support(English, Simplified Chinese, Traditional Chinese)
-- Search
-- Semantic HTML
-- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed))
-- Contact information (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
-- Mathematical formula ([MathJax](https://www.mathjax.org/))
-- Flowchart, Sequence diagram, Gantt diagram ([mermaid](https://mermaidjs.github.io/))
-- Line Chart, Bar Chart, Radar Chart, Pie Chart ([chartjs](http://www.chartjs.org/))
-- Page views ([LeanCloud](https://leancloud.cn/))
-- Comments ([Disqus](https://disqus.com/))
+- 响应式
+- 皮肤
+- 代码高亮主题
+- 目录
+- 多作者
+- 多语言支持（English, 简体中文, 繁體中文）
+- 搜索
+- Web 语意化
+- RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
+- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
+- 数学公式（[MathJax](https://www.mathjax.org/)）
+- 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
+- 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
+- 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
+- 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
 - Google Analytics
 
-## Skins
+## 皮肤
 
-You can choose these 6 built-in skins below:
+TeXt 内置以下 6 套皮肤：
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
@@ -43,42 +43,46 @@ You can choose these 6 built-in skins below:
 | --- |  --- | --- |
 | ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.png) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.png) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.png) |
 
-### Highlight Theme
+### 代码高亮主题
 
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
+TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它的代码高亮主题。
 
 | `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
 | --- |  --- | --- | --- |  --- |
 | ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
 
-## Documentation
+## 文档
 
-### Start
+### 开始
 
-- [Quick Start](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start)
-- [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2)
+- [快速开始](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
+- [从 1.x 升级到 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/zh/update-form-1-to-2)
 
-### Customization
+### 定制
 
-- [Configuration](https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration)
-- [Navigation](https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation)
-- [Layouts](https://tianqi.name/jekyll-TeXt-theme/docs/en/layouts)
-- [Logo and Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/en/logo-and-favicon)
-- [Authors](https://tianqi.name/jekyll-TeXt-theme/docs/en/authors)
+- [配置](https://tianqi.name/jekyll-TeXt-theme/docs/zh/configuration)
+- [导航栏](https://tianqi.name/jekyll-TeXt-theme/docs/zh/navigation)
+- [布局](https://tianqi.name/jekyll-TeXt-theme/docs/zh/layouts)
+- [Logo 和 Favicon](https://tianqi.name/jekyll-TeXt-theme/docs/zh/logo-and-favicon)
+- [作者](https://tianqi.name/jekyll-TeXt-theme/docs/zh/authors)
 
-### Content
+### 内容
 
-- [Writing Posts](https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts)
-- [Markdown Enhancements](https://tianqi.name/jekyll-TeXt-theme/docs/en/markdown-enhancements)
-- [Additional styles](https://tianqi.name/jekyll-TeXt-theme/docs/en/additional-styles)
+- [撰写博客](https://tianqi.name/jekyll-TeXt-theme/docs/zh/writing-posts)
+- [Markdown 增强](https://tianqi.name/jekyll-TeXt-theme/docs/zh/markdown-enhancements)
+- [附加样式](https://tianqi.name/jekyll-TeXt-theme/docs/zh/additional-styles)
 
-## Demo Pages
+## 其他资源
+
+在 *_includes/icon/social* 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
+
+## 示例
 
 | Name | Description |
 | --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | Home page with posts list |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | You can filter tags and search here |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | 文章列表页 |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 过滤标签和查询 |
 
-## License
+## 协议
 
-TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
+TeXt Theme 遵循 [MIT 协议](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)。
