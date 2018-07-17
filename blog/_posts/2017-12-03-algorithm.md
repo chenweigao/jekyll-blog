@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Basic Algorithm`s Implementation
-key: basicalgorithm
+title: Basic Algorithm - DP Heap sort  swap 
+key: basic-algorithm
 modify_date: 2017-07-12
 tags:
   - Algorithm
@@ -11,9 +11,45 @@ mathjax: true
 
 <!--more-->
 
-# 1. Sort
 
-## 1.1 Quick Sort
+# Loops and Recursive
+
+
+## Asymptotic Growth
+
+###  O-notation
+
+- O-notation(Bog-O), When we say “the running time is $O(n^2)$” we mean that the worst-case running time is $ O(n^2)$ – the best case might be better. (渐进上界)
+- When we say “the running time is Ω(n2)” we mean that the best-case running time is $$Ω(n^2)$$ – the worst case might be worse.(渐进下界)
+
+
+## Recurrences
+
+- Substitution method
+- Recursion-tree method
+- Master method
+
+Simplified Master Theorem:
+
+Let $a \geq 1$ and $b > 1$ be constants and let $T(n)$ be the recurrence $T(n) = aT(\frac{n}{b}) + cn^k$, defined for $n \geq 0$.
+
+1. If $a > b^k$, then $T(n) = \Theta(n^ {log_{a}b})$.
+2. If $a = b^k$, then $T(n) = \Theta(n^ k{logn})$.
+3. If $a < b^k$ then $T(n) = \Theta(n^k)$.
+
+# Divide-and-Conquer
+
+## Merge Sort 
+
+$T(n) = O(nlog_{2}n)$
+
+another example:
+
+- Counting Inversions
+- Matrix Multiplication: 
+  - Brute Force(暴力):  $O(n^3)$ arithmetic operations
+  - 
+## Quick Sort
 
 {% highlight python linenos %}
 
@@ -47,7 +83,10 @@ print(A)
 
 Divide and conquer: partition, pivot
 
-## 1.2 Selection Sort
+#  Other Sort
+
+
+##  Selection Sort
 
 {% highlight python linenos %}
 
@@ -66,140 +105,24 @@ print(A)
 
 {% endhighlight %}
 
-## 1.3 Counting-sort
+##  Counting-sort
 
+# Heap
 
+## MAX-Heap
 
-# 2. Swap
+Action of build max-heap:
 
+1. 找到最后一个节点的父亲节点
+2. 
 
-## 2.1 Implementation
+## Heapsort
 
-1. 基本实现：
+Priority Queues
 
-   {% highlight c++ linenos %}
+# Elements of DP Algorithms
 
-   //引用实现
-   swap(int &x, int &y){
-       int temp;
-       temp = x;
-       x= y;
-       y =x;
-   }
-   swap(x, y);
+- Optimal substructure
+- Overlapping subproblems
 
-   
-
-   //指针实现
-   swap(int *x, int *y){
-       int temp;
-       temp = *x;
-       *x = *y;
-       *y = temp;
-   }
-   swap(&x, &y);
-   {% endhighlight %}
-
-   
-
-2. 异或实现：
-
-   {% highlight c++ linenos %}
-
-   void swap(int &x, int &y){
-       x ^= y;
-       y ^= x;
-       x ^= y;
-   }
-   swap(x, y);
-
-   void swap(int *x, int *y){
-       *x ^= *y;
-       *y ^= *x;
-       *x ^= *y;
-   }
-   swap(&x, &y);
-   {% endhighlight %}
-
-   
-
-3. 加减操作：
-
-   {% highlight c++ linenos %}
-
-   void swap(int &x, int &y){
-       x = x + y;
-       y = x - y;
-       x = x - y;
-   }
-   swap(x, y);
-
-   void swap(int *x, int *y){
-       *x = *x + *y;
-       *y = *x - *y;
-       *x = *x - *y;
-   }
-   swap(&x, &y);
-   {% endhighlight %}
-
-   
-
-4. 宏定义：
-
-   ```c++
-   #define swap(x, y) { x ^= y; y ^= x; x ^= y; }
-   #define swap(x, y) { x = x + y; y = x - y; x = x - y; }
-   swap(x, y);
-   ```
-
-## 2.2 Add Two Numbers
-
-You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order** and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-
-**Example**
-
-```
-Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-Output: 7 -> 0 -> 8
-Explanation: 342 + 465 = 807.
-```
-
-**code**
-
-```c++
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *dummyHead = new ListNode(0);
-        ListNode *p = l1, *q = l2, *curr = dummyHead;
-        int carry = 0;
-        while(p != nullptr || q != nullptr) {
-            int x = (p != nullptr)? p->val : 0;
-            int y = (q != nullptr)? q->val : 0;
-            int sum = carry + x + y;
-            carry = sum / 10;
-            curr -> next = new ListNode(sum % 10);
-            curr = curr->next;
-            if(p != nullptr)
-                p = p->next;
-            if(q != nullptr)
-                q = q->next;
-        }
-        if(carry > 0) {
-            curr->next = new ListNode(carry);
-        }
-        return dummyHead->next;
-    }
-};
-```
 
