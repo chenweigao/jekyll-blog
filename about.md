@@ -6,9 +6,11 @@ titles:
   zh-Hans: 关于
   zh-Hant: 關於
 key: page-about
+full_width: true
+show_title: false
 ---
 
-An Ordinary Coder
+weigao chen
 -------------------------
 
 
