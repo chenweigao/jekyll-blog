@@ -22,6 +22,8 @@ docs-en:
         url:    /docs/en/build-log
       - title:  Site Post Log
         url:    /docs/en/post-log
+      - title:  Work and Study Log
+        url:    /docs/en/work-log
 
 about:
   - title:      Resume
