@@ -4,7 +4,6 @@ title: "TensorFlow - Basic TensorFlow Guide:Placeholder and Back-propagation"
 key: 20170908
 tags:
   - Deeplearning
-  - Python
 comment: true
 ---
 

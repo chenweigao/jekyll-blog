@@ -4,7 +4,6 @@ title: TensorFlow IO - Process the Path Using Pthony
 key: 20170910
 tags:
   - Deeplearning
-  - Python
 comment: true
 ---
 <!--more-->
