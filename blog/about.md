@@ -6,6 +6,8 @@ titles:
   zh-Hans: 关于
   zh-Hant: 關於
 key: page-about
+sidebar:
+  nav: about
 ---
 
 Just say something about yourself. :+1:

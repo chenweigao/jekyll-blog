@@ -5,6 +5,7 @@ key: networks
 modify_date: 2018-05-30
 tags: Research
 mermaid: true
+author: weigao chen
 ---
 
 
