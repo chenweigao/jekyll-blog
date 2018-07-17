@@ -20,6 +20,8 @@ docs-en:
     children:
       - title:  Site Build Log
         url:    /docs/en/build-log
+      - title:  Site Post Log
+        url:    /docs/en/post-log
 
 about:
   - title:      Resume
