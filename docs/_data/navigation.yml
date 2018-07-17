@@ -3,12 +3,14 @@ header:
     url:        /archive.html
   - title:      Detail
     url:        /blog/
+
   - title:      Docs
     url:        /docs/en/build-log
   # - title:      文档
   #   url:        /docs/zh/quick-start
   - title:      About
-    url:        /about.html
+    url:        /about
+
   - title:      GitHub
     url:        https://github.com/chenweigao
 
@@ -18,3 +20,9 @@ docs-en:
     children:
       - title:  Site Build Log
         url:    /docs/en/build-log
+
+about:
+  - title:      Resume
+    children: 
+      - title:  about
+        url:    /about
