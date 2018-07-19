@@ -1,13 +1,16 @@
 ---
 layout: article
-title: "YOLO，Darknet"
+title: "Sliding window, YOLO and Darknet"
 key: yolo
 modify_date: 2018-07-19
 tags: 
-	- Research
-	- Deeplearning
+- Research
+- Deeplearning
 mermaid: true
 ---
+
+Face recognition based on YOLO, **You Only Look Once: Unified, Real-Time Object Detection**.
+<!--more-->
 
 # 1. Abstract
 
@@ -48,11 +51,11 @@ mermaid: true
 
 Yolo采用卷积网络来提取特征，然后使用全连接层来得到预测值。网络结构参考GooLeNet模型，包含24个卷积层和2个全连接层。对于卷积层，主要使用1x1卷积来做channle reduction，然后紧跟3x3卷积。对于卷积层和全连接层，采用Leaky ReLU激活函数：$$max(x,0)$$。最后一层``采用线性激活函数。除了上面这个结构，文章还提出了一个轻量级版本Fast Yolo，其仅使用9个卷积层，并且卷积层中使用更少的卷积核。 
 
-![1531978265791]({{ site.url }}\blog\assets\1531978265791.png)
+![1531978265791]({{ site.url }}\assets\1531978265791.png)
 
 在训练之前，先在ImageNet上进行了预训练，其预训练的分类模型采用图中前20个卷积层，然后添加一个average-pool层和全连接层。预训练之后，在预训练得到的20层卷积层之上加上随机初始化的4个卷积层和2个全连接层。由于检测任务一般需要更高清的图片，所以将网络的输入从224x224增加到了448x448。 
 
-由于每个单元格预测多个边界框。但是其对应类别只有一个。那么在训练时，如果该单元格内确实存在目标，那么只选择与ground truth的IOU较大的那个边界框来负责预测该目标，而其它边界框认为不存在目标。这样设置的一个结果将会使一个单元格对应的边界框更加专业化，其可以分别适用不同大小，不同高宽比的目标，从而提升模型性能。大家可能会想如果一个单元格内存在多个目标怎么办，其实这时候Yolo算法就只能选择其中一个来训练，这也是Yolo算法的缺点之一。要注意的一点时，对于不存在对应目标的边界框，其误差项就是只有置信度，左标项误差是没法计算的。而只有当一个单元格内确实存在目标时，才计算分类误差项，否则该项也是无法计算的。  
+由于每个单元格预测多个边界框。但是其对应类别只有一个。那么在训练时，如果该单元格内确实存在目标，那么只选择与ground truth的IOU较大的那个边界框来负责预测该目标，而其它边界框认为不存在目标。这样设置的一个结果将会使一个单元格对应的边界框更加专业化，其可以分别适用不同大小，不同高宽比的目标，从而提升模型性能。大家可能会想如果一个单元格内存在多个目标怎么办，其实这时候Yolo算法就只能选择其中一个来训练，这也是Yolo算法的缺点之一。要注意的一点时，对于不存在对应目标的边界框，其误差项就是只有置信度，左标项误差是没法计算的。而只有当一个单元格内确实存在目标时，才计算分类误差项，否则该项也是无法计算的。
 
 ### 2.2.3 NMS
 
@@ -172,7 +175,7 @@ bicycle: 99%
    size=1
    stride=1
    pad=1
-   filters=45     
+   filters=45
    activation=linear
     
    [region]
@@ -206,7 +209,8 @@ bicycle: 99%
 11. 进行测试
 
 12. ```
-    ./darknet detector test cfg/voc.data cfg/tiny-yolo-voc.cfg results/tiny-yolo-voc_final.weights data/images.jpg
+    ./darknet detector test cfg/voc.data cfg/tiny-yolo-voc.cfg 
+	results/tiny-yolo-voc_final.weights data/images.jpg
     ```
 
     至此，整个过程完成。
