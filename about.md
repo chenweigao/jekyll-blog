@@ -36,7 +36,7 @@ Specialties
 -------
 
 Authoring great user experiences with Python, C++, and Linux. Advocating for the open web. Managing and mentoring dev teams. Performing code reviews.
-	Writing white papers and API documentation. Particating in the black art of software estimation. Drawing from a strong background in many diverse web technologies and frameworks.
+Writing white papers and API documentation. Participating in the black art of software estimation. Drawing from a strong background in many diverse web technologies and frameworks.
 
 
 Experience
