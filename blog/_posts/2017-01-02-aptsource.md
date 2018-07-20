@@ -17,7 +17,13 @@ Source:[USTC](http://mirrors.ustc.edu.cn/)
 sudo vim /etc/apt/source.list
 ```
 
-​	
+or use the command:
+
+```shell
+sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+```
+
+
 
 For Kali Linux:
 
@@ -41,3 +47,15 @@ pip source:
 ```shell
 pip install pythonModuleName -i https://pypi.douban.com/simple
 ```
+
+gem source:
+
+```shell
+$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+$ gem sources -l
+*** CURRENT SOURCES ***
+
+https://gems.ruby-china.org
+# 请确保只有 gems.ruby-china.org
+```
+
