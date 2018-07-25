@@ -5,8 +5,7 @@ header:
     url:        /blog/
 
   - title:      Docs
-    url:        /docs/en/build-log
-  # - title:      文档
+    url:        /docs/en/work-log
   #   url:        /docs/zh/quick-start
   - title:      About
     url:        /about
@@ -18,12 +17,13 @@ header:
 docs-en:
   - title:      Log
     children:
+      - title:  Work and Study Log
+        url:    /docs/en/work-log
       - title:  Site Build Log
         url:    /docs/en/build-log
       - title:  Site Post Log
         url:    /docs/en/post-log
-      - title:  Work and Study Log
-        url:    /docs/en/work-log
+     
 
 about:
   - title:      Resume

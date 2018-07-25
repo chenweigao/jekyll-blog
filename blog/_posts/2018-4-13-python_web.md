@@ -8,7 +8,7 @@ tags: Python
 comment: true
 mathjax: true
 ---
-
+Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. 
   <!--more-->
 
 
@@ -240,6 +240,12 @@ python manage.py makemigrations app
 ```pyth
 python manage.py migrate
 ```
+
+# 5. Video Streaming with Flask
+
+# 6. Flask Test
+
+​	The normal test in python includes **unittest, pytest, nose**, we use the nose to make a test.
 
 
 # New Words
