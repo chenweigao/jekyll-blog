@@ -48,7 +48,7 @@ pip source:
 pip install pythonModuleName -i https://pypi.douban.com/simple
 ```
 
-gem source:
+[gem source](https://ruby.taobao.org/):
 
 ```shell
 $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
