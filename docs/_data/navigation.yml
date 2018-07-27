@@ -17,11 +17,11 @@ header:
 docs-en:
   - title:      Log
     children:
-      - title:  Work and Study Log
+      - title:  Work Log
         url:    /docs/en/work-log
-      - title:  Site Build Log
+      - title:  Site Log
         url:    /docs/en/build-log
-      - title:  Site Post Log
+      - title:  Post Log
         url:    /docs/en/post-log
      
 
