@@ -135,6 +135,14 @@ source ./venv/bin/activate
 (venv) xxx:~/xxx$ deactivate
 ```
 
+ Install from `requirement.txt`:
+
+```python
+pip install -r requirements.txt
+```
+
+
+
 #  4. Network frameworks
 
 MVC(Model-View-Controller) [^1]
