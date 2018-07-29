@@ -203,13 +203,13 @@ defaults:
   - scope:
       path: "docs/zh"
     values:
-      layout: article
+      layout: page
       sidebar:
         nav: docs-zh
       license: true
       aside:
         toc: true
-      lang: zh
+      lang: en
       show_edit_on_github: true
 
 
