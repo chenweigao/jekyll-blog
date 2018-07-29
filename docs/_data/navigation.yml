@@ -8,7 +8,7 @@ header:
     url:        /docs/en/work-log
   #   url:        /docs/zh/quick-start
   - title:      About
-    url:        /about
+    url:        /docs/en/site_about
 
   - title:      GitHub
     url:        https://github.com/chenweigao
@@ -27,6 +27,9 @@ docs-en:
 
 about:
   - title:      About
-    children: 
-      - title:  about
+    children:
+      - title:  Site
+        url:    /docs/en/site_about 
+      - title:  Resume
         url:    /about
+      
