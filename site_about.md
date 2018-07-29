@@ -3,6 +3,7 @@ title: Site Guide
 permalink: /site_about
 key: site_guide
 show_title: true
+layout: page
 show_edit_on_github: true
 sidebar:
   nav: about

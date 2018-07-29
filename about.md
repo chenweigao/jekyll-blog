@@ -5,7 +5,8 @@ titles:
   zh-Hans: 关于
   zh-Hant: 關於
 key: page-about
-full_width: true
+layout: page
+#full_width: true
 show_title: false
 show_head: true
 permalink: /about
