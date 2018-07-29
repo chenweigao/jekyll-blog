@@ -18,41 +18,50 @@ sidebar:
 weigao chen
 -------------------------
 
-Contact
-------------------------
-Phone: [13201750172](tel://13201750172) 
-Blog: [https://weigao.cc](https://www.weigao.cc) 
-Email: <mail@weigao.cc> 
-GitHub: [chenweigao](https://github.com/chenweigao)
+## Contact
+
+#### Phone: [13201750172](tel://13201750172) 
+#### Blog: [https://weigao.cc](https://www.weigao.cc) 
+#### Email: <mail@weigao.cc> 
+#### GitHub: [chenweigao](https://github.com/chenweigao)
+### QQ: [297859260]()
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=297859260&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:297859260:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+## Summary
+
+```
+return -1;
+```
+
+## Experience
+
+```
+return -1;
+```
 
 
-Summary
---------
+## Skills & Expertise
+
+```
+return -1;
+```
 
 
+## Education
 
-Experience
--------
+```
+return -1;
+```
 
+## Honors and Awards
 
+```
+return -1;
+```
 
-Skills & Expertise
-------------------
+## Interests
 
-
-
-Education
--------
-
-
-
-Honors and Awards
------------------
-
-
-
-Interests
----------
-
+```
+return -1;
+```
 
 ©2018 [Weigao Chen](http://weigao.cc). All rights reserved. 
