@@ -19,10 +19,10 @@ weigao chen
 
 Contact
 ------------------------
-- Phone: [13201750172](tel://13201750172) 
-- Blog: [https://weigao.cc](https://www.weigao.cc) 
-- Email: <mail@weigao.cc> 
-- GitHub: [chenweigao](https://github.com/chenweigao)
+Phone: [13201750172](tel://13201750172) 
+Blog: [https://weigao.cc](https://www.weigao.cc) 
+Email: <mail@weigao.cc> 
+GitHub: [chenweigao](https://github.com/chenweigao)
 
 
 Summary
