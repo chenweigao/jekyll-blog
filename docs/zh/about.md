@@ -30,7 +30,6 @@ GitHub: [chenweigao](https://github.com/chenweigao)
 
 QQ: [297859260](tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=297859260)
 
-QQ: <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=297859260&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:297859260:51" alt="Talk to me" title="Talk to me"/></a>
 
 ## Summary
 
@@ -69,5 +68,10 @@ return -1;
 ```
 return -1;
 ```
+## Investment
+
+talk to me with qq: 
 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=297859260&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:297859260:51" alt="Talk to me" title="Talk to me"/></a>
+
+
 ©2018 [Weigao Chen](http://weigao.cc). All rights reserved. 
