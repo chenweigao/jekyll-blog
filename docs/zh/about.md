@@ -8,6 +8,7 @@ key: page-about
 layout: page
 #full_width: true
 show_title: false
+show_edit_on_github: false
 show_head: true
 permalink: /about
 sidebar:

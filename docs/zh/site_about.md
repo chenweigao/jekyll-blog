@@ -4,7 +4,7 @@ permalink: /site_about
 key: site_guide
 show_title: false
 layout: page
-show_edit_on_github: flase
+show_edit_on_github: false
 sidebar:
   nav: about
 ---
