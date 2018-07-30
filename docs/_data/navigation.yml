@@ -23,7 +23,10 @@ docs-en:
         url:    /docs/en/build-log
       - title:  Post Log
         url:    /docs/en/post-log
-     
+  - title:      Other
+    children:
+      - title:  Inspiration
+        url:    /docs/en/inspiration
 
 about:
   - title:      About
