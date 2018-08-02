@@ -6,7 +6,7 @@ tags:
   - Python
   - Algorithm
 comment: true
-modify_date: 2018-5-5
+modify_date: 2018-8-2
 ---
 
 Python’s simplicity lets you become productive quickly, but this often means you aren’t using everything it has to offer.  With this hands-on guide, you’ll learn how to write effective, idiomatic Python code by leveraging its best—and possibly most neglected—features. Author Luciano Ramalho takes you through Python’s core language features and libraries, and shows you how to make your code shorter, faster, and more readable at the same time.
@@ -380,6 +380,35 @@ e.g. 计算10的阶乘：
 ```python
 import functools
 product = functools.reduce(lambda x, y: x*y, range(1,11))
+```
+
+## 7. `__name__`
+
+`__name__`这个系统变量显示了当前模块执行过程中的名称，`__main__`一般作为函数的入口，或者整个工程开始运行的入口。
+
+```python
+#test.py
+def HaveFun():
+    if __name__ == '__main__':
+        print('My name is %s' % __name__)
+    else:
+        print('Someone else called me! my name is %s' % __name__)
+HaveFun()      
+```
+output: `My name is __mian__`
+
+
+
+```
+#main.py
+import test
+test.HaveFun()
+```
+output: 
+
+```
+$ Someone else called me! my name is test
+$ Someone else called me! my name is test
 ```
 
 # Python3 I/O
