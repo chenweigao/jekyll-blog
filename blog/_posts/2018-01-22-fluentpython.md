@@ -6,7 +6,7 @@ tags:
   - Python
   - Algorithm
 comment: true
-modify_date: 2018-8-2
+modify_date: 2018-8-3
 ---
 
 Python’s simplicity lets you become productive quickly, but this often means you aren’t using everything it has to offer.  With this hands-on guide, you’ll learn how to write effective, idiomatic Python code by leveraging its best—and possibly most neglected—features. Author Luciano Ramalho takes you through Python’s core language features and libraries, and shows you how to make your code shorter, faster, and more readable at the same time.
@@ -241,7 +241,7 @@ return not sum(map(({'R': 1, 'L': -1, 'U': 1j, 'D': -1j}).get, moves))
 
 ## 2. map() 
 
-### 2.1 Define
+**Define**
 1. **描述**
 
    **map()** 会根据提供的函数对指定序列做映射。
@@ -262,7 +262,7 @@ return not sum(map(({'R': 1, 'L': -1, 'U': 1j, 'D': -1j}).get, moves))
 
    iterable -- 一个或多个序列 
 
-### 2.2 Usage
+**Usage**
 
 e.g.1. 将一个列表中的整数转化成字符串存储如另一个列表中：
 
@@ -382,7 +382,7 @@ import functools
 product = functools.reduce(lambda x, y: x*y, range(1,11))
 ```
 
-## 7. `__name__`
+## 7. __name__
 
 `__name__`这个系统变量显示了当前模块执行过程中的名称，`__main__`一般作为函数的入口，或者整个工程开始运行的入口。
 
@@ -410,6 +410,20 @@ output:
 $ Someone else called me! my name is test
 $ Someone else called me! my name is test
 ```
+
+# Decorators
+
+## @property
+
+In Python, `property()` is a built-in function that creates and returns a property object. The signature of this function is
+
+```
+property(fget=None, fset=None, fdel=None, doc=None)
+```
+
+where, `fget` is function to get value of the attribute, `fset` is function to set value of the attribute, `fdel` is function to delete the attribute and `doc` is a string (like a comment). 
+
+To better understand this, [see this blog](https://www.programiz.com/python-programming/property).
 
 # Python3 I/O
 
