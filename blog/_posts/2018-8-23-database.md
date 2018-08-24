@@ -103,3 +103,17 @@ ID          NAME        AGE         ADDRESS     SALARY
 5           David       27          Texas       85000.0
 6           Kim         22          South-Hall  45000.0
 ```
+## update
+
+```
+sqlite> UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
+```
+
+# Register
+
+```python
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
+
+```
+
