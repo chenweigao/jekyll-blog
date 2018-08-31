@@ -1,12 +1,16 @@
 ---
 layout: article
-title: Database - SQLite2, MongoDB, SQLAlchemy
+title: Database - SQLite3, MongoDB, SQLAlchemy
 key: database
 modify_date: 2018-8-23
-tags: Python
+tags: 
+- Python
+- Web
 comment: true
 mathjax: true
 ---
+
+How to use [SQLite3](), [Flask-PyMongo]().
 
 <!--more-->
 
@@ -46,13 +50,18 @@ Python ORM lib includes **SQLAlchemy**, Django ORM, Peewee
 
 `database` –`collection` – `document`– `field` – `index`.
 
+[install in LInux](http://www.runoob.com/mongodb/mongodb-linux-install.html)
+
 process in terminal:
 
 ```
 ./mongo.exe
 > show dbs
-> use [db name]
+> use [db name] #create db
+> db #see db
+> db.createCollection(name, options) #create collections
 > show collections
+> db.colname.insert({"xx", "xx"})
 > db.collection_name.find()
 > db.collection_name.find().pretty() #show in formatted
 ```
@@ -63,11 +72,34 @@ batch import `.json` file:
 mongoimport --db users --collection contacts --file xx.json
 ```
 
-flask mongo:
+# Flask-PyMongo
+
+Install: `pip install flask_pymongo`
+
+in `config.py`:
+
+```
+class Config:
+	MONGO_URI = "mongodb://localhost:27017/myDatabase"
+```
+
+in `app/___init__.py`:
+
 ```
 from flask_pymongo import PyMongo
+from config import config
 mongo = PyMongo()
 mono.init_app(app)
+```
+
+in `views.py`:
+
+```
+from app import mongo
+@main.route('/', methods=['GET', 'POST'])
+def index():
+	data = mongo.db.mycol.find()
+	# mycol is the name of collections
 ```
 
 
@@ -140,6 +172,5 @@ sqlite> UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
 ```python
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
-
 ```
 

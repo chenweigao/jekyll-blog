@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Python Web Development
+title: Python Web Development - Basic
 key: python_web
 modify_date: 2018-5-30
 date: 2018-7-23
@@ -253,7 +253,7 @@ python manage.py migrate
 
 # 6. Flask Test
 
-​	The normal test in python includes **unittest, pytest, nose**, we use the nose to make a test.
+	The normal test in python includes **unittest, pytest, nose**, we use the nose to make a test.
 
 
 # New Words
