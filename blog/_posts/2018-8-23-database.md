@@ -46,6 +46,32 @@ Python ORM lib includes **SQLAlchemy**, Django ORM, Peewee
 
 `database` –`collection` – `document`– `field` – `index`.
 
+process in terminal:
+
+```
+./mongo.exe
+> show dbs
+> use [db name]
+> show collections
+> db.collection_name.find()
+> db.collection_name.find().pretty() #show in formatted
+```
+
+batch import `.json` file:
+
+```
+mongoimport --db users --collection contacts --file xx.json
+```
+
+flask mongo:
+```
+from flask_pymongo import PyMongo
+mongo = PyMongo()
+mono.init_app(app)
+```
+
+
+
 # SQLite3
 
 ## Insert
