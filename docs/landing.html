@@ -28,9 +28,11 @@ permalink: /index.html
 
 			<section class="container centered">
 				<div class="about">
-						<div>
-						<img id="myimage" onclick="changeImage()" src="{{ site.url }}/assets/author21.png">
-						</div>
+						<!-- <div style="width: 240px"> -->
+						<!-- <img id="myimage" onclick="changeImage()" src="{{ site.url }}/assets/author21.png"> -->
+						<img style="width : 200px" src="{{ site.url }}/assets/author21.png">
+
+						<!-- </div> -->
 						<br>
 					<h1><a href="/about">Weigao Chen</a></h1>
 
@@ -109,7 +111,7 @@ permalink: /index.html
 			return i;
 		}  
 	</script>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function changeImage() {
 			element = document.getElementById('myimage')
 			if (element.src.match("bulbon")) {
@@ -119,7 +121,7 @@ permalink: /index.html
 				element.src = "{{ site.url }}/assets/timg1.png";
 			}
 		}
-	</script>
+	</script> -->
 </body>
 
 </html>
