@@ -1,4 +1,6 @@
---- permalink: /index.html ---
+--- 
+permalink: /index.html 
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +29,7 @@
 			<section class="container centered">
 				<div class="about">
 						<div style="width: 280px">
-						<img src="{{ site.url }}/assets/author21.png">
+						<img id="myimage" onclick="changeImage()" src="{{ site.url }}/assets/author21.png">
 						</div>
 						<br>
 					<h1><a href="/about">Weigao Chen</a></h1>
@@ -111,10 +113,10 @@
 		function changeImage() {
 			element = document.getElementById('myimage')
 			if (element.src.match("bulbon")) {
-				element.src = "C:\Users\nerche\Documents\nerche_site1\assets/author2.png";
+				element.src = "{{ site.url }}/assets/author21.png";
 			}
 			else {
-				element.src = "C:\Users\nerche\Documents\nerche_site1\assets/author.png";
+				element.src = "{{ site.url }}/assets/timg1.png";
 			}
 		}
 	</script>
