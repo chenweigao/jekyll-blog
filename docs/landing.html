@@ -1,6 +1,4 @@
---- 
-permalink: /index.html 
----
+--- permalink: /index.html ---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +11,6 @@ permalink: /index.html
 	<title>site-weigao.cc</title>
 
 	<link rel="stylesheet" type="text/css" href="demo.css">
-
 	<!-- <meta name="generator" content="Hugo 0.41" /> -->
 </head>
 
@@ -21,7 +18,7 @@ permalink: /index.html
 	<main class="wrapper">
 		<nav class="navigation">
 			<section class="container">
-			<p> weigao.cc </p>
+				<!-- <p> weigao.cc </p> -->
 			</section>
 		</nav>
 		<div style="position: absolute; bottom: 10px; right: 10px;"> <span id="nowDateTimeSpan"></span> </div>
@@ -29,13 +26,13 @@ permalink: /index.html
 
 			<section class="container centered">
 				<div class="about">
-					<img id="myimage" onclick="changeImage()" src="http://www.w3school.com.cn/i/eg_bulboff.gif">
-					<br>
-					<br>
+						<div style="width: 280px">
+						<img src="{{ site.url }}/assets/author21.png">
+						</div>
+						<br>
 					<h1><a href="/about">Weigao Chen</a></h1>
-					<div class="article__content" itemprop="description articleBody">{%- include article-footer/author-profile.html -%}</div>
-					
-					<span class="tips"><h2 style="display: inline; text-align: left;">M.S. In Xidian University</h2></span>
+
+					<span class="tips"><h2 style="display: inline; text-align: left;">M.S. In Xidian</h2></span>
 					<br>
 
 					<ul>
@@ -114,20 +111,13 @@ permalink: /index.html
 		function changeImage() {
 			element = document.getElementById('myimage')
 			if (element.src.match("bulbon")) {
-				element.src = "http://www.w3school.com.cn/i/eg_bulboff.gif";
+				element.src = "C:\Users\nerche\Documents\nerche_site1\assets/author2.png";
 			}
 			else {
-				element.src = "http://www.w3school.com.cn/i/eg_bulbon.gif";
+				element.src = "C:\Users\nerche\Documents\nerche_site1\assets/author.png";
 			}
 		}
-	</script>
-<script>
-		{%- include scripts/lib/scroll.js -%}
-		{%- include scripts/lib/affix.js -%}
-		{%- include scripts/lib/toc.js -%}
-		{%- include scripts/page.js -%}
 	</script>
 </body>
 
 </html>
-
