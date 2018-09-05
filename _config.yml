@@ -17,7 +17,7 @@
 ## => Site Settings
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+highlight_theme: tomorrow # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://www.weigao.cc
 baseurl : 
 title   : weigao.cc
@@ -101,7 +101,7 @@ paginate_path: /blog/page:num # don't change this unless for special need
 
 ## => Sources
 ##############################
-sources: unpkg # bootcdn (default), unpkg
+sources: # bootcdn (default), unpkg
 
 
 ## => Comments
