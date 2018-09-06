@@ -56,7 +56,7 @@ Python ORM lib includes **SQLAlchemy**, Django ORM, Peewee
 
 process in terminal:
 
-```
+```shell
 ./mongo.exe
 > show dbs
 > use [db name] #create db
@@ -70,7 +70,7 @@ process in terminal:
 
 batch import `.json` file:
 
-```
+```shell
 mongoimport --db users --collection contacts --file xx.json
 ```
 
@@ -84,14 +84,14 @@ Install: `pip install flask_pymongo`
 
 in `config.py`:
 
-```
+```python
 class Config:
 	MONGO_URI = "mongodb://localhost:27017/myDatabase"
 ```
 
 in `app/___init__.py`:
 
-```
+```python
 from flask_pymongo import PyMongo
 from config import config
 mongo = PyMongo()
@@ -100,7 +100,7 @@ mono.init_app(app)
 
 in `views.py`:
 
-```
+```python
 from app import mongo
 @main.route('/', methods=['GET', 'POST'])
 def index():
@@ -116,7 +116,7 @@ def index():
 
 [create table](http://www.runoob.com/sqlite/sqlite-create-table.html)
 
-```
+```powershell
 CREATE TABLE COMPANY(
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
@@ -149,7 +149,7 @@ INSERT INTO COMPANY VALUES (7, 'James', 24, 'Houston', 10000.00 );
 
 then format the table:
 
-```
+```shell
 sqlite> .header on
 sqlite> .mode column
 sqlite> SELECT * FROM COMPANY;
@@ -157,7 +157,7 @@ sqlite> SELECT * FROM COMPANY;
 
 output is:
 
-```
+```shell
 ID          NAME        AGE         ADDRESS     SALARY
 ----------  ----------  ----------  ----------  ----------
 1           Paul        32          California  20000.0
@@ -169,7 +169,7 @@ ID          NAME        AGE         ADDRESS     SALARY
 ```
 ## update
 
-```
+```shell
 sqlite> UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
 ```
 
