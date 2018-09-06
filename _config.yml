@@ -152,8 +152,9 @@ sources: # bootcdn (default), unpkg
 markdown    : kramdown
 highlighter : pygments
 permalink   : date
-kramdown:
-  input: GFM
+# kramdown:
+#   input: GFM
+pyments     : true
 exclude:
   - CHANGELOG.md
   - CHECKLIST.md
