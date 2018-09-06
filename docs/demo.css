@@ -133,11 +133,11 @@ pre {
   overflow-x: auto
 }
 
-code {
+/* code {
   background-color: #000;
   color: #fefefe;
   padding: .4rem .8rem .4rem .8rem
-}
+} */
 
 blockquote {
   border-left: 2px solid #dcdcdc;
