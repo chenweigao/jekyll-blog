@@ -48,6 +48,8 @@ Python ORM lib includes **SQLAlchemy**, Django ORM, Peewee
 
 # MongoDB
 
+### Basic
+
 `database` –`collection` – `document`– `field` – `index`.
 
 [install in LInux](http://www.runoob.com/mongodb/mongodb-linux-install.html)
@@ -71,6 +73,10 @@ batch import `.json` file:
 ```
 mongoimport --db users --collection contacts --file xx.json
 ```
+
+### Query Documents
+
+- specify conditions using query operators
 
 # Flask-PyMongo
 
