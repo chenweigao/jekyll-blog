@@ -18,8 +18,8 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://www.weigao.cc
-baseurl : "/"
+url     : 
+baseurl : 
 title   : weigao.cc
 description: >
       welcome and thxs for visiting!
