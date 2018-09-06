@@ -149,7 +149,8 @@ sources: # bootcdn (default), unpkg
 
 ## => Build
 ##############################
-markdown    : kramdown
+# markdown    : 
+markdown: redcarpet
 highlighter : rouge
 permalink   : date
 kramdown:
