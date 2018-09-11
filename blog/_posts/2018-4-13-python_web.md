@@ -1,16 +1,61 @@
 ---
 layout: article
-title: Python Web Development - Basic
+title: Python Web Development, Flask, Database
 key: python_web
-modify_date: 2018-5-30
+modify_date: 2018-9-11
 date: 2018-7-23
-tags: Python
+tags: 
+- Python
+- Web
 comment: true
 mathjax: true
 ---
 Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. 
   <!--more-->
 
+# 0. Flask Structure
+
+## 0.1 Context
+
+**application context and request context**：
+
+| variable      | context             | description                                          |
+| ------------- | ------------------- | ---------------------------------------------------- |
+| `current_app` | application context | The application instance for the active application. |
+| `g`           | ac                  |                                                      |
+| `request`     | request context     |                                                      |
+| `session`     | rc                  |                                                      |
+
+```python
+from flask import current_app
+```
+> [`g`](http://flask.pocoo.org/docs/1.0/api/#flask.g) is a special object that is unique for each request. It is used to store data that might be accessed by multiple functions during the request. The connection is stored and reused instead of creating a new connection if `get_db` is called a second time in the same request.
+
+## 0.2 Blueprint
+
+We use the `create_app()` so that the application is created at runtime.
+
+> A blueprint is similar to an application in that it can also define routes. The difference is that routes associated with
+> a blueprint are in a dormant state until the blueprint is registered with an application, at which point the routes become part of it.
+
+```python
+# app/main/__init__.py
+from flask import Blueprint
+main = Blueprint('main', __name__)
+```
+
+The constructor for this class takes two required arguments: **the blueprint name** and **the model or package where the blueprint is located**(always default `__name__`).
+
+## 0.3 Others
+
+1. `redirect()`: 重定向
+
+2. `url_for()`: 路由地址反向生成
+
+   ```
+   url_for('[a function name]')  #输出这个函数对应的URL
+   return redirect(url_for('auth.unconfirmed'))
+   ```
 
 # 1. Client Dev
 
@@ -90,6 +135,93 @@ Python ORM lib includes **SQLAlchemy**, Django ORM, Peewee
 
 , Strom and SQLObject.
 
+## 2.4 MongoDB
+
+### Basic
+
+`database` –`collection` – `document`– `field` – `index`.
+
+[install in LInux](http://www.runoob.com/mongodb/mongodb-linux-install.html)
+
+process in terminal:
+
+```shell
+./mongo.exe
+> show dbs
+> use [db name] #create db
+> db #see db
+> db.createCollection(name, options) #create collections
+> show collections
+> db.colname.insert({"xx", "xx"})
+> db.collection_name.find()
+> db.collection_name.find().pretty() #show in formatted
+```
+
+batch import `.json` file:
+
+```shell
+mongoimport --db users --collection contacts --file xx.json
+```
+
+### Query Documents
+
+- specify conditions using query operators
+
+## 2.5 Flask-PyMongo
+
+Install: `pip install flask_pymongo`
+
+in `config.py`:
+
+```python
+class Config:
+	MONGO_URI = "mongodb://localhost:27017/myDatabase"
+```
+
+in `app/___init__.py`:
+
+```python
+from flask_pymongo import PyMongo
+from config import config
+mongo = PyMongo()
+mono.init_app(app)
+```
+
+in `views.py`:
+
+```python
+from app import mongo
+@main.route('/', methods=['GET', 'POST'])
+def index():
+	data = mongo.db.mycol.find()
+	# mycol is the name of collections
+```
+
+## 2.6 SQLite3
+
+[create table](http://www.runoob.com/sqlite/sqlite-create-table.html)
+
+format the table:
+
+```shell
+sqlite> .header on
+sqlite> .mode column
+sqlite> SELECT * FROM COMPANY;
+```
+
+update:
+
+```shell
+sqlite> UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
+```
+
+register:
+
+```python
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy()
+```
+
 # 3. Virtual environment
 
 在项目开发中，为了避免每个项目不同组件安装在同一台计算机时导致相互之间的冲突，需要使用到虚拟环境。开发者或者系统管理员可以让每个项目运行在独立的虚拟环境中，从而避免了不同项目组件之间配置的冲突。
@@ -141,6 +273,12 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
+generate a `requirement.txt` from current project:
+
+```
+pip freeze > requirement.txt
+```
+
 
 
 #  4. Network frameworks
@@ -154,6 +292,8 @@ MVC(Model-View-Controller) [^1]
 ![MVC]({{ site.url }}/assets/500px-MVC-Process.svg.png)
 
 目前python主流的Web框架包括: Django, Tornado, Flask and Twisted.
+
+
 
 ## 4.1 Web Server
 
@@ -249,12 +389,192 @@ python manage.py makemigrations app
 python manage.py migrate
 ```
 
+## 4.3 Jinja
+
+### Rendering templates
+
+```python
+@app.route('/user/<name>')
+def user(name):
+    return render_template('user.html', name=name)
+```
+
+The function `render_template` takes the filename of the template as its first argument, the additional arguments are `key/value` pairs **that represent actual values for variables referenced in the template**.
+
+`user.html` like this:
+
+```
+{% raw %}
+<h1>Hello, {{ name|capitalize }}!</h1>
+{% endraw %}
+```
+
+In this example, we use the **variable filters**: `safe`, `capitalize`(converts the first character of the value to uppercase), `lower`,`upper`, `title`, `trim`(removes leading and trailing whitespace from the value), `striptags`(removes any HTML tags from the value before rendering).
+
+The default Jinja delimiters are configured as follows:
+
+```
+{% raw %}
+{% ... %} for statemrnt
+	e.g. {% if loop.index is divisibleby 3 %}
+{{ ... }} for Expressions to print to the template output
+{# ... #} for Comments not included in the template output
+#  ... ## for Line Statements
+{% endraw %}
+```
+
+#### Whitespace Control
+
+The official docs about [Whitespace Control](http://jinja.pocoo.org/docs/2.10/templates/#whitespace-control).
+
+`trim_blocks` : remove the first newline after a template tag.
+
+`lstrip_blocks`: strips tabs and spaces from the beginning of a line to the start of a block.
+
+#### Line Statements
+
+```
+{% raw %}
+<ul>
+# for item in seq
+    <li>{{ item }}</li>
+# endfor
+</ul>
+{% endraw %}
+```
+
+equals:
+
+```
+{% raw %}
+<ul>
+{% for item in seq %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endraw %}
+```
+
+### Flask_Bootstrap
+
+Install: `pip install flask-bootstrap`
+
+Basic usage:
+
+```python
+# app.py
+from flask_bootstrap import Bootstrap
+app = Flak(__name__)
+bootstrap = Bootstrap(app)
+```
+
+In the `base.html` file, to import the bootstrap layout:
+
+```
+{% raw %}
+{% extends "bootstrap/base.html" %}
+{% endraw %}
+```
+
+If you want run the app:
+
+```python
+# app.py
+if __name__ == '__main__':
+    app.run(port=45467, debug=True)
+```
+
+**Flask-moment** is very useful for localization of dates and times, Install `pip install flask-moment`.
+
+```
+from flask import import Moment
+moment = Moment(app)
+```
+
+usage in html file: ‘L’ to ‘LLLL’ for different levels of verbosity.
+
+```
+{{ momnet(current_time)}}.format('LLLL') }}
+# output: Monday, July 30, 2018 9:31 PM
+```
+
+### Bootstrap CND
+
+[link](https://www.bootstrapcdn.com/bootswatch/)
+
+## 4.4 Web Forms
+
+Install: `pip install Flask-WTF`
+
+create the forms:
+
+```
+# forms.py
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, BooleanField
+from wtforms.validators import DataRequired
+
+
+class VideoForm(FlaskForm):
+    switch_map = BooleanField(u'Open the map', default=1)
+    switch_video = BooleanField(u'Open the video')
+    submit = SubmitField(u'Submit')
+```
+
+use the forms:
+
+```
+# views.py
+from wtforms import ValidationError
+from .forms import VideoForm
+
+@main.route('/', methods=['GET', 'POST'])
+def index():
+    form = VideoForm()
+    return render_template('index.html', form=form)
+```
+
+In html file:
+
+```
+# index.html
+{% raw %}
+<div>
+	{{ wtf.quick_form(form) }}
+<div>
+{% endraw %}
+```
+
 # 5. Video Streaming with Flask
 
 # 6. Flask Test
 
-	The normal test in python includes **unittest, pytest, nose**, we use the nose to make a test.
+> The normal test in python includes **unittest, pytest, nose**, we use the nose to make a test.
+>
 
+# 7. Flask Script
+
+```python
+# manage.py
+import os
+from app import create_app, db
+from app.models import User, Role
+from flask.ext.script import Manager, Shell
+from flask.ext.migrate import Migrate, MigrateCommand
+
+app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+manager = Manager(app)
+migrate = Migrate(app, db)
+
+def make_shell_context():
+    return dict(app=app, db=db, User=User, Role=Role)
+
+manager.add_command("shell", Shell(make_context=make_shell_context))
+manager.add_command('db', MigrateCommand)
+
+if __name__ == '__main__':
+    manager.run()
+```
 
 # New Words
 
