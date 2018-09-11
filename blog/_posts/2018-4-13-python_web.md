@@ -13,9 +13,9 @@ mathjax: true
 Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions. 
   <!--more-->
 
-# 0. Flask Structure
+# . Flask Structure
 
-## 0.1 Context
+## .1 Context
 
 **application context and request context**：
 
@@ -31,7 +31,7 @@ from flask import current_app
 ```
 > [`g`](http://flask.pocoo.org/docs/1.0/api/#flask.g) is a special object that is unique for each request. It is used to store data that might be accessed by multiple functions during the request. The connection is stored and reused instead of creating a new connection if `get_db` is called a second time in the same request.
 
-## 0.2 Blueprint
+## .2 Blueprint
 
 We use the `create_app()` so that the application is created at runtime.
 
@@ -46,7 +46,7 @@ main = Blueprint('main', __name__)
 
 The constructor for this class takes two required arguments: **the blueprint name** and **the model or package where the blueprint is located**(always default `__name__`).
 
-## 0.3 Others
+## .3 Others
 
 1. `redirect()`: 重定向
 
@@ -223,8 +223,6 @@ db = SQLAlchemy()
 ```
 
 # 3. Virtual environment
-
-在项目开发中，为了避免每个项目不同组件安装在同一台计算机时导致相互之间的冲突，需要使用到虚拟环境。开发者或者系统管理员可以让每个项目运行在独立的虚拟环境中，从而避免了不同项目组件之间配置的冲突。
 
 ## 3.1 Installation
 
