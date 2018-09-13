@@ -11,6 +11,7 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
   background: #f8f8f8 !important;
   /* background: #fff !important; */
   color: black;
+  font-size: 0.9rem !important;
 }
 
 .hljs-comment,
