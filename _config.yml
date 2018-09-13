@@ -221,6 +221,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-github-metadata
-  - jemoji TEXT THEME
+  - jemoji
 
 data_dir: /docs/_data

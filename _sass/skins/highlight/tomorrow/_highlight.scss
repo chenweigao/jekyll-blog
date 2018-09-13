@@ -6,7 +6,7 @@ pre.lineno {
   color: $highlight-comment !important;
 }
 .highlight > pre {
-  background-color: $highlight-background !important;
+  background-color: $highlight-background;
   color: $highlight-foreground;
   .c   { color: $highlight-comment } /* Comment */
   .err { color: $highlight-red } /* Error */
