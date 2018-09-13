@@ -133,13 +133,13 @@ pre {
   overflow-x: auto
 }
 
-/* code {
+code {
   background-color: #000;
   color: #fefefe;
   padding: .4rem .8rem .4rem .8rem
-} */
+} 
 
-/* blockquote {
+blockquote {
   border-left: 2px solid #dcdcdc;
   padding-left: 1.6rem;
   font-style: italic
@@ -175,7 +175,7 @@ table tr td:last-child, table tr th:last-child {
 
 img {
   max-width: 100%
-} */
+}
 
 .wrapper {
   display: flex;
