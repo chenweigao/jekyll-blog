@@ -166,11 +166,11 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  - /docs
+  # - /docs
   - /node_modules
   - /screenshots
-  - /test
-  - /vendor
+  # - /test
+  # - /vendor
   - /_posts
   - /index.html
 
@@ -221,6 +221,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-github-metadata
-  - jemoji
+  - jemoji TEXT THEME
 
 data_dir: /docs/_data
