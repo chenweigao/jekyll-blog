@@ -15,7 +15,7 @@
     // "skins/orange",
 
     // "skins/highlight/{{ site.highlight_theme | default: site.data.variables.default.highlight_theme }}",
-    // "skins/highlight/tomorrow",
+    "skins/highlight/tomorrow",
     // "skins/highlight/tomorrow-night",
     // "skins/highlight/tomorrow-night-eighties",
     // "skins/highlight/tomorrow-night-blue",
@@ -51,6 +51,5 @@
     "layout/archive",
     "layout/article",
     "layout/landing",
-    "layout/404",
-    "skins/highlight"
+    "layout/404"
 ;
