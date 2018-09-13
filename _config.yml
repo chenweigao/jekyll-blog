@@ -224,3 +224,6 @@ plugins:
   - jemoji TEXT THEME
 
 data_dir: /docs/_data
+
+sass:
+    sass_dir: _sass
