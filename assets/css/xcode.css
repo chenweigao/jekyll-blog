@@ -8,7 +8,8 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #f7f7f7 !important;
+  /* background: #f7f7f7 !important; */
+  background: #fff !important;
   color: black;
 }
 
