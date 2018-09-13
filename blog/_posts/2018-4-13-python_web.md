@@ -10,11 +10,29 @@ tags:
 comment: true
 mathjax: true
 ---
-Flask **variable, blueprint** and install from **requirement.txt**, some basic knowledge about **WSGI, Nginx and Django**.
+[How to build socketio in Flask project : socketio](#socketio)
 
-[blueprint](#blueprint)
+Flask **variable, [blueprint](#blueprint)** and install from **[requirement.txt](#requirement.txt)**, some basic knowledge about **WSGI, Nginx and Django**.
 
   <!--more-->
+
+# Reference
+
+| NAME           | URL                                              | DESCRIPTION                         |
+| -------------- | ------------------------------------------------ | ----------------------------------- |
+| flask_socketio | https://github.com/miguelgrinberg/flack          | a project using `flask_socketio`    |
+|                | https://flask-socketio.readthedocs.io/en/latest/ | `flask_socketio ` official tutorial |
+| blueprint      | http://flask.pocoo.org/docs/1.0/blueprints/      |                                     |
+
+
+
+# SocketIO
+
+```shell
+pip install
+```
+
+
 
 # Flask Structure
 
@@ -33,6 +51,8 @@ from flask import current_app
 > [`g`](http://flask.pocoo.org/docs/1.0/api/#flask.g) is a special object that is unique for each request. It is used to store data that might be accessed by multiple functions during the request. The connection is stored and reused instead of creating a new connection if `get_db` is called a second time in the same request.
 
 # Blueprint
+
+[Tutorial : Modular Applications with Blueprints](http://flask.pocoo.org/docs/1.0/blueprints/)
 
 We use the `create_app()` so that the application is created at runtime.
 
