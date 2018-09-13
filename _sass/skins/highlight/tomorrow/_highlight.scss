@@ -1,12 +1,12 @@
 figure.highlight::before {
-  background-color: #8959a8 !important;
+  background-color: $highlight-background !important;
   color: $highlight-comment !important;
 }
 pre.lineno {
   color: $highlight-comment !important;
 }
 .highlight > pre {
-  background-color: #8959a8 !important;
+  background-color: $highlight-background !important;
   color: $highlight-foreground;
   .c   { color: $highlight-comment } /* Comment */
   .err { color: $highlight-red } /* Error */
