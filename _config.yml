@@ -166,11 +166,11 @@ exclude:
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
-  # - /docs
+  - /docs
   - /node_modules
   - /screenshots
-  # - /test
-  # - /vendor
+  - /test
+  - /vendor
   - /_posts
   - /index.html
 
