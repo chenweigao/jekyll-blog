@@ -1575,7 +1575,7 @@ pre code {
   font-size: inherit;
   color: inherit;
   white-space: pre-wrap;
-  background-color: transparent;
+  background-color: blue;
   border-radius: 0;
 }
 .pre-scrollable {

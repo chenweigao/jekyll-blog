@@ -29,7 +29,7 @@ Flask **variable, [blueprint](#blueprint)** and install from **[requirement.txt]
 # SocketIO
 
 ```shell
-pip install
+pip install flask-socketio
 ```
 
 
