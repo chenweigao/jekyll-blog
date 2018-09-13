@@ -71,7 +71,7 @@
   pre {
     @include overflow(auto);
     & > code {
-      padding: 0;
+      padding: .2rem .5rem;
       background-color: transparent;
       word-wrap: normal;
       &.language-mermaid, &.language-chart {
