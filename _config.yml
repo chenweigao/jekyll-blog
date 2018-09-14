@@ -138,13 +138,13 @@ sources: # bootcdn (default), unpkg
 
 ## => Analytics
 ##############################
-# analytics:
-#   provider: # false (default), "google", "custom"
+analytics:
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
-  # google:
-  #   tracking_id : UA-71907556-1
-  #   anonymize_ip: false
+google:
+  tracking_id : UA-125807473-1
+  anonymize_ip: false
 
 
 ## => Build
