@@ -18,11 +18,11 @@ Flask **variable, [blueprint](#blueprint)** and install from **[requirement.txt]
 
 # Reference
 
-| NAME           | URL                                              | DESCRIPTION                         |
-| -------------- | ------------------------------------------------ | ----------------------------------- |
-| flask_socketio | https://github.com/miguelgrinberg/flack          | a project using `flask_socketio`    |
-|                | https://flask-socketio.readthedocs.io/en/latest/ | `flask_socketio ` official tutorial |
-| blueprint      | http://flask.pocoo.org/docs/1.0/blueprints/      |                                     |
+| NAME           | URL                                                          | DESCRIPTION                                                  |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| flask_socketio | [https://github.com/miguelgrinberg/flack](https://github.com/miguelgrinberg/flack) | a project using `flask_socketio`                             |
+|                | https://flask-socketio.readthedocs.io/en/latest/             | `flask_socketio ` official tutorial                          |
+| blueprint      | http://flask.pocoo.org/docs/1.0/blueprints/                  | [official tutorial](http://flask.pocoo.org/docs/1.0/blueprints/) |
 
 
 
